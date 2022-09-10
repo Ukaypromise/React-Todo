@@ -1,15 +1,14 @@
+/* eslint-disable */
 import React from "react";
 import Button from "./Button";
 
-const Header = ({ title }) => {
-const onClick =()=>{
-    console.log('Click');
-}
+const Header = (props) => {
+  const { title } = props;
 
   return (
     <div className="header">
       <h1>{title}</h1>
-      <Button color='blue' onClick={onClick} text='Add Task'/>
+      <Button color="blue" text="Add Task" />
     </div>
   );
 };
