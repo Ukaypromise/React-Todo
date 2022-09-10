@@ -1,11 +1,20 @@
-import React from 'react'
+/* eslint-disable */
+import React from "react";
+import Button from "./Button";
 
-const Header = () => {
+const Header = (props) => {
+  const { title } = props;
+
   return (
-    <div>
-        <h1>Task Manager</h1>
+    <div className="header">
+      <h1>{title}</h1>
+      <Button color="blue" text="Add Task" />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+Header.defaultProps = {
+  title: "Task Manager",
+};
+
+export default Header;
