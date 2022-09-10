@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import Button from "./Button";
 
-const Header = () => {
-  return (
-    <div>
-        <h1>Task Manager</h1>
-    </div>
-  )
+const Header = ({ title }) => {
+const onClick =()=>{
+    console.log('Click');
 }
 
-export default Header
+  return (
+    <div className="header">
+      <h1>{title}</h1>
+      <Button color='blue' onClick={onClick} text='Add Task'/>
+    </div>
+  );
+};
+
+Header.defaultProps = {
+  title: "Task Manager",
+};
+
+export default Header;
