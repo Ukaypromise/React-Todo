@@ -44,8 +44,11 @@ body {
 }
 
 .App {
-  width: 600px;
-  margin-top: 5rem;
+  width: 700px;
+  margin: 4rem;
+  border: #0c0c2b 1px solid;
+  border-radius: 2rem;
+  padding: 2rem;
 }
 
 .container {
