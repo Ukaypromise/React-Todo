@@ -8,7 +8,11 @@ const Header = (props) => {
   return (
     <div className="header">
       <h1>{title}</h1>
-      <Button color="blue" text={showAdd ? "close" : "Add Task"} onClick={onToggle} />
+      <Button
+        color={showAdd ? "red" : "blue"}
+        text={showAdd ? "close" : "Add Task"}
+        onClick={onToggle}
+      />
     </div>
   );
 };
