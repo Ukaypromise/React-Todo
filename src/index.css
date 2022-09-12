@@ -135,10 +135,12 @@ footer {
     border-radius: 0;
     border: none;
   }
-  h1{
+
+  h1 {
     font-size: 1.5rem;
   }
+
   .container {
-  max-width: 100vw;
+    max-width: 100vw;
   }
 }
