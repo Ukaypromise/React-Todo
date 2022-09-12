@@ -26,6 +26,7 @@ const task = [
 ];
 
 function App() {
+  const [toggleTask, setToggleTask] = useState(false);
   const [tasks, setTasks] = useState(task);
 
   // Add Task
@@ -44,8 +45,11 @@ function App() {
   };
   return (
     <div className="App">
-      <Header />
-      <AddTask onAdd={addTask} />
+      <Header
+        onToggle={() => setToggleTask(!toggleTask)}
+        showAdd={toggleTask}
+      />
+      {toggleTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
